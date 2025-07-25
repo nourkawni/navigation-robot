@@ -7,18 +7,33 @@ An indoor autonomous robot built using:
 
 ---
 
-<pre lang="markdown"> ## 🗂️ Repository Structure ``` navigation-robot/ ├── robot_ws/ # ROS 2 workspace │ ├── src/ # ROS 2 packages (Python nodes) │ ├── scripts/ # Shell scripts to run and setup │ ├── build/ # Auto-generated build files (ignored) │ ├── install/ # Auto-generated install files (ignored) │ └── log/ # ROS logs (ignored) ├── arduino/ # Arduino sketch for motor control ├── images/ # Robot images and wiring diagrams ├── .gitignore ├── LICENSE └── README.md ``` </pre>
-
+## 🗂️ Repository Structure
+navigation-robot/
+├── robot_ws/ # ROS 2 workspace
+│ ├── src/ # ROS 2 packages (Python nodes)
+│ ├── scripts/ # Shell scripts to run and setup
+│ ├── build/ # Auto-generated build files (ignored)
+│ ├── install/ # Auto-generated install files (ignored)
+│ └── log/ # ROS logs (ignored)
+├── arduino/ # Arduino sketch for motor control
+├── images/ # Robot images or wiring diagrams
+├── .gitignore
+├── LICENSE
+└── README.md
+---
 ## ✨ Features
 
-- Real-time SLAM using RPLiDAR A1
-- ROS 2 (Jazzy) based Python nodes for autonomous navigation
-- Serial communication with Arduino for motor control
-- Modular and extensible ROS 2 package structure
-- Shell scripts for quick setup and launch
+- 🔍 **SLAM Mapping** using [Cartographer](https://google-cartographer.readthedocs.io/) for real-time map generation
+- 📍 **Localization** with Adaptive Monte Carlo Localization (AMCL)
+- 🧭 **Path Planning** using:
+  - Global Planner: **Dijkstra**
+  - Local Planner: **Dynamic Window Approach (DWA)**
+- 🧠 Built on **ROS 2 Jazzy** (Python nodes)
+- ⚙️ **Serial communication** with Arduino Nano for real-time motor control
+- 🛠️ Fully automated launch using custom shell scripts
+- 💡 Modular ROS 2 workspace (`robot_ws/`) and Arduino code (`arduino/`)
 
 ---
-
 ## 🚀 Getting Started
 
 ### 🔧 Prerequisites

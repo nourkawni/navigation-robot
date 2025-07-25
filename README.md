@@ -16,7 +16,7 @@ navigation-robot/
 │ ├── install/ # Auto-generated install files (ignored)
 │ └── log/ # ROS logs (ignored)
 ├── arduino/ # Arduino sketch for motor control
-├── images/ # Robot images or wiring diagrams
+├── images/ # Robot images and wiring diagrams
 ├── .gitignore
 ├── LICENSE
 └── README.md

@@ -71,10 +71,10 @@ The Arduino Nano controls the robot's motors based on commands received from the
    ```bash
    arduino-cli compile --fqbn arduino:avr:nano arduino/navigation_code.ino
 3. Upload the code:
-  ```bash
-   arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano
+```bash
+  arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano  ```
 
----
+
 
 ## 🧠 Raspberry Pi / ROS 2 Setup
 

@@ -52,10 +52,6 @@ navigation-robot/
 
 ## ⚙️ Setup Instructions
 
-### 🧠 Raspberry Pi / ROS 2 Setup
-
-1. Clone the repo:
-
 ## 🔌 Arduino Setup
 
 The Arduino Nano controls the robot's motors based on commands received from the Raspberry Pi via a serial (USB) connection.
@@ -74,4 +70,62 @@ The Arduino Nano controls the robot's motors based on commands received from the
 2. Compile the code:
    ```bash
    arduino-cli compile --fqbn arduino:avr:nano arduino/navigation_code.ino
+## 🧠 Raspberry Pi / ROS 2 Setup
+
+After connecting the hardware:
+
+- **Arduino Nano** to the Raspberry Pi via USB  
+- **RPLiDAR A1** via USB  
+
+You can run the following shell scripts from `robot_ws/scripts/` to operate the robot:
+
+1. **Start autonomous movement and obstacle avoidance**  
+    ```bash
+    ./robot_move.sh
+    ```
+    This will launch the robot movement node, visualize real-time LiDAR scans in **RViz**, and enable obstacle avoidance.
+
+2. **Start SLAM and build a map**  
+    ```bash
+    ./show_map.sh
+    ```
+    This launches Cartographer SLAM and shows the live map in **RViz**.
+
+3. **Save the generated map**  
+    ```bash
+    ./save_map.sh
+    ```
+
+4. **Stop robot motion**  
+    After mapping, stop the robot’s movement to prevent interference.  
+    (The LiDAR process should remain running.)
+
+5. **View robot model (URDF)**  
+    ```bash
+    ./model.sh
+    ```
+
+6. **Start localization**  
+    ```bash
+    ./localization.sh
+    ```
+
+7. **Enable global path planning**  
+    ```bash
+    ./globalization.sh
+    ```
+
+8. **Send navigation goals (point-to-point)**  
+    ```bash
+    ./point_to_point.sh
+    ```
+    You can send goal points via **RViz’s "2D Nav Goal"** or the terminal.
+
+9. **Optional: Run coverage mode**  
+    For autonomous full-room coverage, launch:  
+    ```bash
+    ros2 run coverage coverage_node
+    ```
+
+> 📝 **Note:** Make sure you have sourced the ROS 2 workspace and installed all dependencies before running these commands.
 

@@ -8,6 +8,7 @@ An indoor autonomous robot built using:
 ---
 
 ## 🗂️ Repository Structure
+
 navigation-robot/
 ├── robot_ws/ # ROS 2 workspace
 │ ├── src/ # ROS 2 packages (Python nodes)
@@ -20,7 +21,8 @@ navigation-robot/
 ├── .gitignore
 ├── LICENSE
 └── README.md
----
+
+
 ## ✨ Features
 
 - 🔍 **SLAM Mapping** using [Cartographer](https://google-cartographer.readthedocs.io/) for real-time map generation

@@ -7,19 +7,7 @@ An indoor autonomous robot built using:
 
 ---
 
-## 🗂️ Repository Structure
-navigation-robot/
-├── robot_ws/ # ROS 2 workspace
-│ ├── src/ # ROS 2 packages (Python nodes)
-│ ├── scripts/ # Shell scripts to run and setup
-│ ├── build/ # Auto-generated build files (ignored)
-│ ├── install/ # Auto-generated install files (ignored)
-│ └── log/ # ROS logs (ignored)
-├── arduino/ # Arduino sketch for motor control
-├── images/ # robot images 
-├── .gitignore
-├── LICENSE
-└── README.md
+<pre lang="markdown"> ## 🗂️ Repository Structure ``` navigation-robot/ ├── robot_ws/ # ROS 2 workspace │ ├── src/ # ROS 2 packages (Python nodes) │ ├── scripts/ # Shell scripts to run and setup │ ├── build/ # Auto-generated build files (ignored) │ ├── install/ # Auto-generated install files (ignored) │ └── log/ # ROS logs (ignored) ├── arduino/ # Arduino sketch for motor control ├── images/ # Robot images and wiring diagrams ├── .gitignore ├── LICENSE └── README.md ``` </pre>
 
 ## ✨ Features
 

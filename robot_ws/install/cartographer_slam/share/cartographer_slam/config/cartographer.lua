@@ -1,0 +1,1 @@
+/home/samah/robot_ws/build/cartographer_slam/config/cartographer.lua

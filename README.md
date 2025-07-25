@@ -68,7 +68,7 @@ The Arduino Nano controls the robot's motors based on commands received from the
 
 ### 🔧 Uploading the Code
 
-#### 📦 Option 1: Using Arduino CLI
+#### Using Arduino CLI
 
 1. Open a terminal in the root of your project
 2. Compile the code:
